@@ -1,8 +1,6 @@
 # Site settings
 title: Open-Data-Visualisations
 email: email@email.com
-baseurl: "/data-viz"
-url: ""
 exclude: ['README.md','_site']
 
 # Build settings
