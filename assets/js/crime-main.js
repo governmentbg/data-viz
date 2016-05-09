@@ -2,8 +2,8 @@ $(function(){
 
 	queue()
 		.defer(d3.json, "../assets/topojson/bg-oblasti-simple.json")
-		.defer(d3.csv, "../assets/data/crime/mvr-aggr-13-perth-full.csv")
-		.defer(d3.csv, "../assets/data/crime/mvr-aggr-13-prc-full.csv")
+		.defer(d3.csv, "../assets/data/crime/mvr-aggr-13-perth.csv")
+		.defer(d3.csv, "../assets/data/crime/mvr-aggr-13-prc.csv")
 		.defer(d3.json, "../assets/data/crime/recoded-en-bg-crime.json")
 		.await(ready);
 
@@ -125,7 +125,7 @@ $(function(){
 	// External interface
 	var initialYear=2000,
 		currentYear=2000,
-		lastYear=2015,
+		lastYear=2014,
 		years = [];
 
 	for (var i = initialYear; i <= lastYear; i++) { years.push(i); }
