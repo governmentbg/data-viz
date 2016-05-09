@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="bg">
-    
+  <html lang="bg">
     {% include head.html %}
 
     {% if page.custom_css_path %}
@@ -8,32 +7,24 @@
         <link rel='stylesheet' type='text/css' href='{{ css_path }}' />
       {% endfor %}
     {% endif %}
+  <body>
+    <div id="wrapper">
+      {% include nav.html %}
 
-<body>
-    
-  <div id="wrapper">
-    
-    {% include nav.html %}
+      <div class="container">
+        {{ content }}
+      </div>
 
-    <div class="container">
-      
-      {{ content }}
-      
+      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+      {% if page.custom_js_path %}
+        {% for js_path in page.custom_js_path %}
+          <script src="{{ js_path }}"></script>
+        {% endfor %}
+      {% endif %}
+
+      {% include footer.html %}
     </div>
-
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-    {% if page.custom_js_path %}
-      {% for js_path in page.custom_js_path %}
-        <script src="{{ js_path }}"></script>
-      {% endfor %}
-    {% endif %}
-
-    {% include footer.html %}
-    
-  </div>
-
-</body>
-
+  </body>
 </html>

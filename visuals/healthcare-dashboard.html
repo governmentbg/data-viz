@@ -1,9 +1,9 @@
 ---
 layout: default
 title: 'Здравеопазване'
-custom_css_path: 
+custom_css_path:
   - '../assets/libs/css/dc.css'
-custom_js_path: 
+custom_js_path:
   - 'http://d3js.org/d3.v3.js'
   - '../assets/libs/js/crossfilter.min.js'
   - '../assets/libs/js/dc.min.js'
@@ -11,64 +11,66 @@ custom_js_path:
 ---
 
  <div class="row-fluid">
-        <h3> Демонстрация на визуализации - Интерактивно табло </h3>
-        <p> Визуализацията на отворени данни в здравеопазването под формата на интерактивни табла свързва информация от различни източници и има голям аналитичен потенциал.<br>
-        Показаното табло дава възможност за анализ на представянето на здравната система по области в страната. Данните, захранващи таблото, включват информация от Националния статистически институт за осигуреността на населението със здравен персонал и данни за смъртността. Те са свързани с данни за плащанията, извършени по Национална здравноосигурителна каса към РЗОК по области. Дейтални записки за използвания набор от данни могат да бъдат намерени тук.<br>
-        Първата графика дава обобщена картина за представянето на здравната система. <br>
-        По хоризонтала е показана усреднената динамика на смъртността за избраните години (по подразбиране 2006-2013). Колкото по-наляво се намира един кръг, толкова по-голям е спадът на смърността на хиляда души за периода.<br>
-        По вертикала е показана усреднената динамика на осигуреността за избраните години. Колкото по-нагоре се намира един кръг, толкова по-голям е ръстът на осигуреността с лекари на хиляда души за периода.<br>
-        Големината на всеки кръг демонстрира кумулативния обем на средствата, изплатени от НЗОК за избраните години. Оцветяването отразява обема на изплатените средства в сравнение със средното за страната.<br>
-        Суровите данни използвани в тази визуализация могат да бъдат свалени от <a href="https://github.com/governmentbg/data-viz/tree/gh-pages/assets/data/hc-dashboard">тук</a><br>
-        </p>
-  </div>
+  <h3> Демонстрация на визуализации - Интерактивно табло </h3>
+  <p> Визуализацията на отворени данни в здравеопазването под формата на интерактивни табла свързва информация от различни източници и има голям аналитичен потенциал.<br>
+  Показаното табло дава възможност за анализ на представянето на здравната система по области в страната. Данните, захранващи таблото, включват информация от Националния статистически институт за осигуреността на населението със здравен персонал и данни за смъртността. Те са свързани с данни за плащанията, извършени по Национална здравноосигурителна каса към РЗОК по области. Дейтални записки за използвания набор от данни могат да бъдат намерени тук.<br>
+  Първата графика дава обобщена картина за представянето на здравната система. <br>
+  По хоризонтала е показана усреднената динамика на смъртността за избраните години (по подразбиране 2006-2013). Колкото по-наляво се намира един кръг, толкова по-голям е спадът на смърността на хиляда души за периода.<br>
+  По вертикала е показана усреднената динамика на осигуреността за избраните години. Колкото по-нагоре се намира един кръг, толкова по-голям е ръстът на осигуреността с лекари на хиляда души за периода.<br>
+  Големината на всеки кръг демонстрира кумулативния обем на средствата, изплатени от НЗОК за избраните години. Оцветяването отразява обема на изплатените средства в сравнение със средното за страната.<br>
+  Суровите данни използвани в тази визуализация могат да бъдат свалени от <a href="https://github.com/governmentbg/data-viz/tree/gh-pages/assets/data/hc-dashboard">тук</a><br>
+  </p>
+</div>
 
-  <div class="row-fluid">
-      <div id="region-bubble-chart" class="bubble-graph span12">
-        <strong>Представяне в здравеопазването</strong><br>
-        <a class="reset" href="javascript:regionBubbleChart.filterAll();dc.redrawAll();" style="display: none;">Изчисти</a>
-            <span class='reset' style='display: none;'>Приложен филтър: <span class='filter'></span></span>
-      </div>
+<div class="row-fluid">
+  <div id="region-bubble-chart" class="bubble-graph span12">
+    <strong>Представяне в здравеопазването</strong><br>
+    <a class="reset" href="javascript:regionBubbleChart.filterAll();dc.redrawAll();" style="display: none;">Изчисти</a>
+    <span class='reset' style='display: none;'>Приложен филтър: <span class='filter'></span></span>
   </div>
+</div>
 
-  <div class="row-fluid">
-    <div class="span4">
+<div class="row-fluid">
+  <div class="span4">
     <div id="bigregion-pie-chart" class="dc-chart">
       <strong>Изплатени средства по статистически региони</strong><br>
       <a class="reset" href="javascript:bigregionPieChart.filterAll();dc.redrawAll();" style="display: none;">Изчисти</a>
-          <span class='reset' style='display: none;'>Приложен филтър: <span class='filter'></span></span><br>
+      <span class='reset' style='display: none;'>Приложен филтър: <span class='filter'></span></span><br>
     </div>
   </div>
   <div class="span4">
     <div id="yearly-row-chart" class="dc-chart">
       <strong>Изплатени средства от НЗОК по години</strong><br>
       <a class="reset" href="javascript:yearlyRowChart.filterAll();dc.redrawAll();" style="display: none;">Изчисти</a>
-          <span class='reset' style='display: none;'>Приложен филтър: <span class='filter'></span></span><br>
+      <span class='reset' style='display: none;'>Приложен филтър: <span class='filter'></span></span><br>
     </div>
   </div>
   <div class="span4">
     <div id="better-pie-chart" class="dc-chart">
       <strong>Динамика на нивото на смъртността</strong><br>
       <a class="reset" href="javascript:betterOrWorsePieChart.filterAll();dc.redrawAll();" style="display: none;">Изчисти</a>
-          <span class='reset' style='display: none;'>Приложен филтър: <span class='filter'></span></span><br>
+      <span class='reset' style='display: none;'>Приложен филтър: <span class='filter'></span></span><br>
     </div>
   </div>
 </div>
+
 <div class="row-fluid">
   <div id="region-bar-chart" class="dc-chart">
     <strong>Изплатени средства от НЗОК по региони</strong>
     <a class="reset" href="javascript:regionBarChart.filterAll();dc.redrawAll();" style="display: none;">Изчисти</a>
-        <span class='reset' style='display: none;'>Приложен филтър: <span class='filter'></span></span><br>
+    <span class='reset' style='display: none;'>Приложен филтър: <span class='filter'></span></span><br>
   </div>
 </div>
+
 <div class="row-fluid">
-    <div id='data-count' class="dc-data-count dc-chart">
-        <span class='filter-count'></span> записа издбрани от <span class='total-count'></span> записа
-    </div>
+  <div id='data-count' class="dc-data-count dc-chart">
+    <span class='filter-count'></span> записа издбрани от <span class='total-count'></span> записа
+  </div>
 </div>
+
 <div class="row-fluid">
-    <div id='data-table' class="table table-hover">
-    </div>
+  <div id='data-table' class="table table-hover">
+  </div>
 </div>
 
 <div id="attributions" class="row-fluid"></div>
-                    

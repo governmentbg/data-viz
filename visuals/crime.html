@@ -1,12 +1,12 @@
 ---
 layout: default
 title: 'Престъпност в страната'
-custom_css_path: 
+custom_css_path:
   - '../assets/libs/css/d3.slider.css'
   - '../assets/css/crime.css?v=123'
   - '../assets/css/open-charts.css?v=123'
   - '../assets/libs/css/jquery.smartmenus.bootstrap.css'
-custom_js_path: 
+custom_js_path:
   - 'http://d3js.org/d3.v3.min.js'
   - 'http://d3js.org/topojson.v1.min.js'
   - 'https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js'
@@ -17,279 +17,273 @@ custom_js_path:
   - '../assets/js/crime-main.js?v=123'
 ---
 
-  <div class="row-fluid">
-      <h3> Динамика на престъпността във времето </h3>
+<div class="row-fluid">
+  <h3> Динамика на престъпността във времето </h3>
 
-    <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#infoModal"><span class="glyphicon glyphicon-align-right" aria-hidden="true"></span></button>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#infoModal"><span class="glyphicon glyphicon-align-right" aria-hidden="true"></span></button>
 
-      <!-- Modal -->
-      <div id="infoModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+    <!-- Modal -->
+    <div id="infoModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
 
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Анализ</h4>
-            </div>
-            <div class="modal-body">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <h4>Анализ на престъпността и разкриваемостта</h4>
-                  <p> Средната престъпност в страната спада през периода 2001-2008, но в рамките на следващите две години ситуацията се влошава до нивото от 2000 година. В последните 4 години престъпността намалява, като достига своя минимум през 2015<br>
-                  В същото време, разкриваемостта спада през последните 11 години от 61% през 2004 до 38% през 2014.<br>
-                  През 2014 София-град и Бургас са областите с най-висока престъпност, докато Смолян и Кърджали са с най-ниски нива за страната. В Бургас е втората най-ниска разкриваемост за страната.<br>
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
-            </div>
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Анализ</h4>
           </div>
-
+          <div class="modal-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <h4>Анализ на престъпността и разкриваемостта</h4>
+                <p> Средната престъпност в страната спада през периода 2001-2008, но в рамките на следващите две години ситуацията се влошава до нивото от 2000 година. В последните 4 години престъпността намалява, като достига своя минимум през 2015<br>
+                В същото време, разкриваемостта спада през последните 11 години от 61% през 2004 до 38% през 2014.<br>
+                През 2014 София-град и Бургас са областите с най-висока престъпност, докато Смолян и Кърджали са с най-ниски нива за страната. В Бургас е втората най-ниска разкриваемост за страната.<br>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+          </div>
         </div>
-      </div>
-      
-      <br>
-      <br>
 
-      <p> Настоящата страница предоставя средство за анализ на данните за динамиката на престъпността и разкриваемостта за последните 15 години, достъпни на <a href="https://www.mvr.bg/Planirane_otchetnost/Statistika/Police_statistika.htm">сайта на Министерсто на Вътрешните работи</a><br>
-      От навигационното меню може да изберете вид на престълението, което да анализирате, като има са достъпни данни за всички 80 вида, отчитани от МВР в периода. За бърз преглед на данните е включена анимирано меню<br>
-      Под картата са показани подробно и данните за нивото на престъпна дейност във всяка област и съответно разкиваемост. Областите могат да бъдат ранкиране на лесен сравнителен анализ.<br>
-      Избирайки област с кликане на картата ще се обновят и графиките за динамиката на престъпността в периода в съответната община.<br>
-      За преглед на подробен анализ на данните отворете бутона в дясно.<br>
-      Суровите данни използвани в тази визуализация могат да бъдат свалени от <a href="https://github.com/governmentbg/data-viz/tree/gh-pages/assets/data/crime">тук</a>.<br>
-      </p>
-      
+      </div>
     </div>
 
+    <br>
+    <br>
 
-    <div class="vdivider"> </div>
-    <div class="vdivider"> </div>
+    <p> Настоящата страница предоставя средство за анализ на данните за динамиката на престъпността и разкриваемостта за последните 15 години, достъпни на <a href="https://www.mvr.bg/Planirane_otchetnost/Statistika/Police_statistika.htm">сайта на Министерсто на Вътрешните работи</a><br>
+    От навигационното меню може да изберете вид на престълението, което да анализирате, като има са достъпни данни за всички 80 вида, отчитани от МВР в периода. За бърз преглед на данните е включена анимирано меню<br>
+    Под картата са показани подробно и данните за нивото на престъпна дейност във всяка област и съответно разкиваемост. Областите могат да бъдат ранкиране на лесен сравнителен анализ.<br>
+    Избирайки област с кликане на картата ще се обновят и графиките за динамиката на престъпността в периода в съответната община.<br>
+    За преглед на подробен анализ на данните отворете бутона в дясно.<br>
+    Суровите данни използвани в тази визуализация могат да бъдат свалени от <a href="https://github.com/governmentbg/data-viz/tree/gh-pages/assets/data/crime">тук</a>.<br>
+    </p>
+</div>
 
-    <!-- Navbar -->
-    <div class="navbar navbar-default" role="navigation">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Престъпления :</a>
-      </div>
-      <div class="navbar-collapse collapse">
+<div class="vdivider"> </div>
+<div class="vdivider"> </div>
 
-        <!-- Left nav -->
-        <ul class="nav navbar-nav">
-          <li id='navSelector'><a href="#">Общo<span class="caret"></span></a>
+<!-- Navbar -->
+<div class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Престъпления :</a>
+  </div>
+  <div class="navbar-collapse collapse">
+
+    <!-- Left nav -->
+    <ul class="nav navbar-nav">
+      <li id='navSelector'><a href="#">Общo<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Престъпления против личността<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Престъпления против личността<span class="caret"></span></a>
+              <li><a href="#">Убийство<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Убийство<span class="caret"></span></a>
+                  <li><a href="#">Умишлено убийство<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#">Умишлено убийство<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="#">Убийство по поръчка</a></li>
-                        </ul>
-                      </li>
+                      <li><a href="#">Убийство по поръчка</a></li>
+                    </ul>
+                  </li>
 
-                      <li><a href="#">Умишлено убийство (опит)</a></li>
-                      <li><a href="#">Убийство на новородено</a></li>
-                      <li><a href="#">Подпомагане, склоняване към самоубийство</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Разврат<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Блудство</a></li>
-                      <li><a href="#">Изнасилване</a></li>
-                      <li><a href="#">Изнасилване (опит)</a></li>
-                      <li><a href="#">Сводничество и отвличане за разврат</a></li>
-                      <li><a href="#">Насилствен хомосексуализъм</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Телесна повреда<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Умишлена тежка телесна повреда</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Отвличане и противозаконно лишаване от свобода</a></li>
-                  <li><a href="#">Задържане на заложник</a></li>
-                  <li><a href="#">Трафик на хора</a></li>
-                  <li><a href="#">Други против личността</a></li>
+                  <li><a href="#">Умишлено убийство (опит)</a></li>
+                  <li><a href="#">Убийство на новородено</a></li>
+                  <li><a href="#">Подпомагане, склоняване към самоубийство</a></li>
                 </ul>
               </li>
-              <li><a href="#">Престъпления против собствеността<span class="caret"></span></a>
+              <li><a href="#">Разврат<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Грабеж<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Въоръжен грабеж<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="#">Въоръжен грабеж чрез огнестрелно оръжие</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#">Магистрален грабеж<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="#">Магистрален въоръжен грабеж</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Кражба<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Джебчийска кражба</a></li>
-                      <li><a href="#">Взломна кражба</a></li>
-                      <li><a href="#">Домова кражба</a></li>
-                      <li><a href="#">Кражба от офиси</a></li>
-                      <li><a href="#">Кражба от магазини</a></li>
-                      <li><a href="#">Кражба на части и вещи от МПС</a></li>
-                      <li><a href="#">Кражба на оръжие и боеприпаси</a></li>
-                      <li><a href="#">Кражба на селскостопанска продукция, домашни животни и птици</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Измама</a></li>
-                  <li><a href="#">Изнудване</a></li>
-                  <li><a href="#">Други против собствеността</a></li>
+                  <li><a href="#">Блудство</a></li>
+                  <li><a href="#">Изнасилване</a></li>
+                  <li><a href="#">Изнасилване (опит)</a></li>
+                  <li><a href="#">Сводничество и отвличане за разврат</a></li>
+                  <li><a href="#">Насилствен хомосексуализъм</a></li>
                 </ul>
               </li>
-              <li><a href="#">Общоопасни престъпления<span class="caret"></span></a>
+              <li><a href="#">Телесна повреда<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Палеж<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Повреждане чрез взрив</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Незаконно производство, притежаване и използване на оръжие</a></li>
-                  <li><a href="#">Посегателства спрямо МПС<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Противозаконно отнемане на МПС</a></li>
-                      <li><a href="#">Съдействие при връщане на МПС с цел имотна облага</a></li>
-                      <li><a href="#">Кражба на МПС</a></li>
-                      <li><a href="#">Грабеж на МПС</a></li>
-                      <li><a href="#">Грабеж на МПС от престъпна група</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Престъпления, свързани с наркотици<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Контрабанда</a></li>
-                      <li><a href="#">Производство, притежаване, разпространение, пренасяне</a></li>
-                      <li><a href="#">Склоняване към употреба</a></li>
-                      <li><a href="#">Отглеждане на растения</a></li>
-                      <li><a href="#">Превод на суми, придобити чрез трафик на наркотици</a></li>
-                      <li><a href="#">Финансови операции и сделки със суми</a></li>
-                      <li><a href="#">Възпрепятстване контрол</a></li>
-                      <li><a href="#">Неправомерен контрол</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Престъпления по транспорта<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Транспортни убийства по непредпазливост</a></li>
-                      <li><a href="#">Транспортни телесни повреди по непредпазливост</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Други общоопасни</a></li>
+                  <li><a href="#">Умишлена тежка телесна повреда</a></li>
                 </ul>
               </li>
-              <li><a href="#">Други криминални престъпления<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Престъпления против правата на гражданите</a></li>
-                  <li><a href="#">Престъпления против брака, семейството и младежта<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Незаконно осиновяване</a></li>
-                      <li><a href="#">Неплащане на издръжка</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Престъпления против дейността на държавни и обществени организации<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Използване на полицейски знаци</a></li>
-                      <li><a href="#">Незаконно преминаване през граница</a></li>
-                      <li><a href="#">Превеждане през граница</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Компютърни престъпления</a></li>
-                  <li><a href="#">Престъпления против реда и общественото спокойствие<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Образуване и участие в престъпна група</a></li>
-                      <li><a href="#">Хулиганство</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Други</a></li>
-                </ul>
-              </li>  
-              <li><a href="#">Смъртни случаи без следи от насилие</a></li>
+              <li><a href="#">Отвличане и противозаконно лишаване от свобода</a></li>
+              <li><a href="#">Задържане на заложник</a></li>
+              <li><a href="#">Трафик на хора</a></li>
+              <li><a href="#">Други против личността</a></li>
             </ul>
           </li>
+          <li><a href="#">Престъпления против собствеността<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Грабеж<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Въоръжен грабеж<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Въоръжен грабеж чрез огнестрелно оръжие</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Магистрален грабеж<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Магистрален въоръжен грабеж</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">Кражба<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Джебчийска кражба</a></li>
+                  <li><a href="#">Взломна кражба</a></li>
+                  <li><a href="#">Домова кражба</a></li>
+                  <li><a href="#">Кражба от офиси</a></li>
+                  <li><a href="#">Кражба от магазини</a></li>
+                  <li><a href="#">Кражба на части и вещи от МПС</a></li>
+                  <li><a href="#">Кражба на оръжие и боеприпаси</a></li>
+                  <li><a href="#">Кражба на селскостопанска продукция, домашни животни и птици</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Измама</a></li>
+              <li><a href="#">Изнудване</a></li>
+              <li><a href="#">Други против собствеността</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Общоопасни престъпления<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Палеж<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Повреждане чрез взрив</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Незаконно производство, притежаване и използване на оръжие</a></li>
+              <li><a href="#">Посегателства спрямо МПС<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Противозаконно отнемане на МПС</a></li>
+                  <li><a href="#">Съдействие при връщане на МПС с цел имотна облага</a></li>
+                  <li><a href="#">Кражба на МПС</a></li>
+                  <li><a href="#">Грабеж на МПС</a></li>
+                  <li><a href="#">Грабеж на МПС от престъпна група</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Престъпления, свързани с наркотици<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Контрабанда</a></li>
+                  <li><a href="#">Производство, притежаване, разпространение, пренасяне</a></li>
+                  <li><a href="#">Склоняване към употреба</a></li>
+                  <li><a href="#">Отглеждане на растения</a></li>
+                  <li><a href="#">Превод на суми, придобити чрез трафик на наркотици</a></li>
+                  <li><a href="#">Финансови операции и сделки със суми</a></li>
+                  <li><a href="#">Възпрепятстване контрол</a></li>
+                  <li><a href="#">Неправомерен контрол</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Престъпления по транспорта<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Транспортни убийства по непредпазливост</a></li>
+                  <li><a href="#">Транспортни телесни повреди по непредпазливост</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Други общоопасни</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Други криминални престъпления<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Престъпления против правата на гражданите</a></li>
+              <li><a href="#">Престъпления против брака, семейството и младежта<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Незаконно осиновяване</a></li>
+                  <li><a href="#">Неплащане на издръжка</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Престъпления против дейността на държавни и обществени организации<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Използване на полицейски знаци</a></li>
+                  <li><a href="#">Незаконно преминаване през граница</a></li>
+                  <li><a href="#">Превеждане през граница</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Компютърни престъпления</a></li>
+              <li><a href="#">Престъпления против реда и общественото спокойствие<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Образуване и участие в престъпна група</a></li>
+                  <li><a href="#">Хулиганство</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Други</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Смъртни случаи без следи от насилие</a></li>
         </ul>
+      </li>
+    </ul>
 
-      </div><!--/.nav-collapse -->
-    </div>
+  </div><!--/.nav-collapse -->
+</div>
 
-    <div id='animation-container' class="row-fluid">
-        <div id="play" class="to-top"></div>
-        <div id="slider-container"  class="to-top">
-          <div id="slider-div"></div>
-        </div>
-    </div>
+<div id='animation-container' class="row-fluid">
+  <div id="play" class="to-top"></div>
+  <div id="slider-container"  class="to-top">
+    <div id="slider-div"></div>
+  </div>
+</div>
 
-    <div class="vdivider"> </div>
-    <div class="vdivider"> </div>
-    <h4 id= 'maptitle' class="title">Карта на престъпността в страната</h4>
-          
-    <div id='maplegend'>
-      <div id='mapregionlegend' class='sidebyside to-top'>
-          <div>Нивото на престъпност (на хил души)</div>
-      </div>
-      <div id='mapbublelegend' class='sidebyside'>
-          <div class="div-right">Процент разкрити престъпления</div>
-      </div>
-    </div>
-  
-    <div id="path-tooltip" class="path-hidden">
-      <p><strong><span id="path-oblast">Име на област</span></strong></p>
-      <p><span id="path-value">100</span></p>
-      <p><span id="path-year">2001</span></p>
-    </div>
+<div class="vdivider"> </div>
+<div class="vdivider"> </div>
+<h4 id= 'maptitle' class="title">Карта на престъпността в страната</h4>
 
-    <div id='map-container'></div>
+<div id='maplegend'>
+  <div id='mapregionlegend' class='sidebyside to-top'>
+    <div>Нивото на престъпност (на хил души)</div>
+  </div>
+  <div id='mapbublelegend' class='sidebyside'>
+    <div class="div-right">Процент разкрити престъпления</div>
+  </div>
+</div>
 
-    <div class="vdivider"> </div>
-    <div class="vdivider"> </div>
-    <div class="vdivider"> </div>
+<div id="path-tooltip" class="path-hidden">
+  <p><strong><span id="path-oblast">Име на област</span></strong></p>
+  <p><span id="path-value">100</span></p>
+  <p><span id="path-year">2001</span></p>
+</div>
 
-    <div class="row">
-      <h4 id='firstRowTitle' class="title"></h4>
+<div id='map-container'></div>
 
-      <div class="col-2 col-lg-6 col-md-6 col-sm-6 panel">
-        <h4 id='barChartOccuredTitle'>Престъпност по области (на хил.души)</h4>
-        <label><input id='barChartOccuredSort' type="checkbox">Ранкирай</label>
-        <div id='barChartOccured'></div>
-      </div>
+<div class="vdivider"> </div>
+<div class="vdivider"> </div>
+<div class="vdivider"> </div>
 
-      <div class="col-2 col-lg-6 col-md-6 col-sm-6 panel">
-        <h4 id='barChartRevealedTitle'>Разкриваемост по области</h4>
-        <label><input id='barChartRevealedSort' type="checkbox">Ранкирай</label>
-        <div id='barChartRevealed'></div>
-      </div>
+<div class="row">
+  <h4 id='firstRowTitle' class="title"></h4>
 
-    </div>
+  <div class="col-2 col-lg-6 col-md-6 col-sm-6 panel">
+    <h4 id='barChartOccuredTitle'>Престъпност по области (на хил.души)</h4>
+    <label><input id='barChartOccuredSort' type="checkbox">Ранкирай</label>
+    <div id='barChartOccured'></div>
+  </div>
 
-    <div class="row">
-      <h4 id='secondRowTitle' class="title"></h4>
+  <div class="col-2 col-lg-6 col-md-6 col-sm-6 panel">
+    <h4 id='barChartRevealedTitle'>Разкриваемост по области</h4>
+    <label><input id='barChartRevealedSort' type="checkbox">Ранкирай</label>
+    <div id='barChartRevealed'></div>
+  </div>
+</div>
 
-      <div class="col-2 col-lg-6 col-md-6 col-sm-6 panel">
-        <h4 id='dualLineChartTotalsTitle'>Динамика на престъпността и разкриваемостта</h4>
-        <div id='dualLineChartTotals'></div>
-      </div>
+<div class="row">
+  <h4 id='secondRowTitle' class="title"></h4>
 
-      <div class="col-2 col-lg-6 col-md-6 col-sm-6 panel">
-        <h4 id='multiLineChartPrcsTitle'>Ръст на престъпността и разкриваемостта</h4>
-        <div id='multiLineChartPrcs'></div>
-      </div>
+  <div class="col-2 col-lg-6 col-md-6 col-sm-6 panel">
+    <h4 id='dualLineChartTotalsTitle'>Динамика на престъпността и разкриваемостта</h4>
+    <div id='dualLineChartTotals'></div>
+  </div>
 
-    </div>
-  
+  <div class="col-2 col-lg-6 col-md-6 col-sm-6 panel">
+    <h4 id='multiLineChartPrcsTitle'>Ръст на престъпността и разкриваемостта</h4>
+    <div id='multiLineChartPrcs'></div>
+  </div>
+</div>
 
-
-    <div class="vdivider"> </div>
+<div class="vdivider"> </div>
