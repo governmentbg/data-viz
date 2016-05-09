@@ -130,6 +130,10 @@
   .opendata-footer {
     position:relative !important;
     bottom: 0;
-    width: 100%;
-    background-color: #f5f5f5;
+    margin-top: 40px;
   }
+  .opendata-footer .container {
+    border-top: 1px solid #C9C0A9;
+    padding: 20px;
+  }
+
