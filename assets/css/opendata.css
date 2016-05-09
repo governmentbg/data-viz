@@ -35,12 +35,8 @@
     color: #3c3d3f;
     line-height: 40px;
     margin-top: 40px !important;
-    padding-top: 0px !important; 
+    padding-top: 0px !important;
     padding-bottom: 0px !important;
-    
-  }
-  .navbar-opendata .navbar-nav > li > a:hover, .navbar-opendata .navbar-nav > li > a:focus {
-    color: #ffffff;
   }
   .navbar-opendata .navbar-nav > li > .dropdown-menu {
     background-color: #f9f9f8;
@@ -56,13 +52,26 @@
   .navbar-opendata .navbar-nav > li > .dropdown-menu > li > .divider {
     background-color: #f9f9f8;
   }
-  .navbar-opendata .navbar-nav > .active > a, .navbar-opendata .navbar-nav > .active > a:hover, .navbar-opendata .navbar-nav > .active > a:focus {
+  .navbar-opendata .navbar-nav > li > a {
+    background-color: #C7C6C1;
+    color: #fff;
+    margin-right: 1px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+  }
+  .navbar-opendata .navbar-nav > .active > a,
+  .navbar-opendata .navbar-nav > .active > a:focus,
+  .navbar-opendata .navbar-nav > .active > a:hover,
+  .navbar-opendata .navbar-nav > .open > a,
+  .navbar-opendata .navbar-nav > .open > a:focus,
+  .navbar-opendata .navbar-nav > .open > a:hover {
     color: #ffffff;
     background-color: #691212;
   }
-  .navbar-opendata .navbar-nav > .open > a, .navbar-opendata .navbar-nav > .open > a:hover, .navbar-opendata .navbar-nav > .open > a:focus {
-    color: #ffffff;
-    background-color: #691212;
+  .navbar-opendata .navbar-nav > li > a:hover,
+  .navbar-opendata .navbar-nav > li > a:focus {
+    background: #eed767;
+    color: #3c3d3f;
   }
   .navbar-opendata .navbar-toggle {
     border-color: #691212;

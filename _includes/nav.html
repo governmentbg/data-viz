@@ -2,16 +2,17 @@
   <div class="container-fluid">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-menuopen">
-          <span class="sr-only">Toggle navigation</span>
+          <span class="sr-only">Покажи/скрий навигацията</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="https://opendata.government.bg/"><img src="{{ "/assets/img/logockan.png" | prepend: site.baseurl }}"></a>
+        <a class="navbar-brand" href="{{ "/" | prepend: site.baseurl }}"><img src="{{ "/assets/img/logockan.png" | prepend: site.baseurl }}"></a>
     </div>
     <div class="collapse navbar-collapse navbar-menuopen">
       <ul class="nav navbar-nav">
-          <li class="active"><a href="{{ "/" | prepend: site.baseurl }}">Начало</a></li>
+        <li class="active"><a href="{{ "/" | prepend: site.baseurl }}">Начало</a></li>
+        <li><a href="https://opendata.government.bg/">Към портала</a></li>
       </ul>
     </div>
   </div>
