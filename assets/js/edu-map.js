@@ -84,7 +84,7 @@
   var mapLeaf = new L.Map("mapLeaf", {center: [42.654, 25.002], zoom: 7, zoomControl: false,
    maxBounds: bounds, 
     maxZoom: 19, minZoom: 7})
-    .addLayer(new L.TileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"));
+    .addLayer(new L.TileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {attribution:'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'}));
 
   // D3 overlay with colored tiles of all municipalities
   var svgLeaf = d3.select(mapLeaf.getPanes().overlayPane).append("svg"),
