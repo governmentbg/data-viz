@@ -1,6 +1,6 @@
 # Site settings
 title: Open-Data-Visualisations
-email: email@email.com
+email: opendata@government.bg
 exclude: ['README.md','_site']
 
 # Build settings
