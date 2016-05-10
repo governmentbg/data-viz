@@ -39,7 +39,7 @@
   var geojsonFeaturesList = [];
 
   var changedLocations = {};
-  var toMail = 'example@mail.com';
+  var toMail = 'opendata@government.bg';
   var ccMail = null;
   var subjectMail = 'SchoolMapLocationChanges';
   var bodyMail = 'Здравейте,\r\n\r\nсмятам че трябва да бъдат направени следните промени по местоположението на показаните училища.\r\n Моля, вижте приложения по-долу документ.\r\n\r\nПоздрави,\r\n\r\n';
